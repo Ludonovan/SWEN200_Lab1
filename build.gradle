@@ -15,7 +15,7 @@ dependencies {
 }
 
 repositories {
-    jcenter()
+  mavenCentral()
 }
 
 apply from: 'instructor-tests.gradle'

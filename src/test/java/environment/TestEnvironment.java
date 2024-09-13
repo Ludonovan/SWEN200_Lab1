@@ -3,6 +3,7 @@ package environment;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertFalse;
 
 import lifeform.LifeForm;
 import org.junit.Test;
@@ -32,6 +33,18 @@ public class TestEnvironment {
     LifeForm actual = env.getLifeForm(1, 2);
     assertEquals("Name", actual.getName());
     assertEquals(100, actual.getCurrentLifePoints());
+  }
+
+  /**
+   * Test border cases for adding a LifeForm
+   */
+  @Test
+  public void testAddBorderCases() {
+    Environment e = new Environment(2, 3);
+    LifeForm lf = new LifeForm("Name", 100);
+    assertTrue(e.addLifeForm(lf, 1, 2));
+    assertTrue(e.addLifeForm(lf, 0, 0));
+    assertFalse(e.addLifeForm(lf, 0, 0));
   }
 
   /**

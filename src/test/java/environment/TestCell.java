@@ -41,4 +41,18 @@ public class TestCell {
     assertFalse(success);
     assertEquals(bob, cell.getLifeForm());
   }
+
+  /**
+   * Checks to see if the LifeForm can properly be removed from a Cell
+   */
+  @Test
+  public void testRemoveLifeForm() {
+    LifeForm bob = new LifeForm("Bob", 40);
+    Cell cell = new Cell();
+    assertTrue(cell.addLifeForm(bob));
+    cell.removeLifeForm();
+    assertNull(cell.getLifeForm());
+  }
+
+
 }
