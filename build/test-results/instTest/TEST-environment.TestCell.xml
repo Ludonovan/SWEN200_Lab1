@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="environment.TestCell" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-11T16:32:04" hostname="mct158s40" time="0.003">
-  <properties/>
-  <testcase name="testSetLifeForm" classname="environment.TestCell" time="0.003"/>
-  <testcase name="testRemoveLifeForm" classname="environment.TestCell" time="0.0"/>
-  <testcase name="testInitialization" classname="environment.TestCell" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
