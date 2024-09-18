@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="lifeform.TestAlien" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-09-18T02:15:40" hostname="DESKTOP-RSEC365" time="0.002">
+<testsuite name="lifeform.TestAlien" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-09-18T03:38:55" hostname="DESKTOP-RSEC365" time="0.005">
   <properties/>
-  <testcase name="initializationError" classname="lifeform.TestAlien" time="0.002">
+  <testcase name="initializationError" classname="lifeform.TestAlien" time="0.005">
     <failure message="java.lang.NoClassDefFoundError: recovery/RecoveryBehavior" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: recovery/RecoveryBehavior
 	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
 	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3578)

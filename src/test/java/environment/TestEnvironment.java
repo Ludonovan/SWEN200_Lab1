@@ -6,6 +6,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertFalse;
 
 import lifeform.LifeForm;
+import lifeform.MockLifeForm;
 import org.junit.Test;
 
 /**
@@ -28,7 +29,7 @@ public class TestEnvironment {
   @Test
   public void testAddLifeForm() {
     Environment env = new Environment(2,3);
-    LifeForm lf = new LifeForm("Name", 100);
+    LifeForm lf = new MockLifeForm("Name", 100);
     assertTrue(env.addLifeForm(lf, 1, 2));
     LifeForm actual = env.getLifeForm(1, 2);
     assertEquals("Name", actual.getName());
@@ -41,7 +42,7 @@ public class TestEnvironment {
   @Test
   public void testAddBorderCases() {
     Environment e = new Environment(2, 3);
-    LifeForm lf = new LifeForm("Name", 100);
+    LifeForm lf = new MockLifeForm("Name", 100);
     assertTrue(e.addLifeForm(lf, 1, 2));
     assertTrue(e.addLifeForm(lf, 0, 0));
     assertFalse(e.addLifeForm(lf, 0, 0));
@@ -53,7 +54,7 @@ public class TestEnvironment {
   @Test
   public void testRemoveLifeForm() {
     Environment env = new Environment(2,3);
-    LifeForm lf = new LifeForm("Bob", 100);
+    LifeForm lf = new MockLifeForm("Bob", 100);
     assertTrue(env.addLifeForm(lf, 1, 2));
     env.removeLifeForm(1, 2);
     assertNull(env.getLifeForm(1,2));

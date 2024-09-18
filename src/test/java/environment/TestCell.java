@@ -7,6 +7,7 @@ import static org.junit.Assert.assertFalse;
 
 import environment.Cell;
 import lifeform.LifeForm;
+import lifeform.MockLifeForm;
 import org.junit.Test;
 
 /**
@@ -29,8 +30,8 @@ public class TestCell {
    */
   @Test
   public void testAddLifeForm() {
-    LifeForm bob = new LifeForm("Bob", 40);
-    LifeForm fred = new LifeForm("Fred", 40);
+    LifeForm bob = new MockLifeForm("Bob", 40);
+    LifeForm fred = new MockLifeForm("Fred", 40);
     Cell cell = new Cell();
     // The cell is empty so this should work.
     boolean success = cell.addLifeForm(bob);
@@ -47,7 +48,7 @@ public class TestCell {
    */
   @Test
   public void testRemoveLifeForm() {
-    LifeForm bob = new LifeForm("Bob", 40);
+    LifeForm bob = new MockLifeForm("Bob", 40);
     Cell cell = new Cell();
     assertTrue(cell.addLifeForm(bob));
     cell.removeLifeForm();

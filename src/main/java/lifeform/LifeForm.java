@@ -4,7 +4,7 @@ package lifeform;
  * Keeps track of the information associated with a simple life form.
  * Also provides the functionality related to the life form.
  */
-public class LifeForm {
+public abstract class LifeForm {
   private String myName;
   private int currentLifePoints;
 
@@ -33,4 +33,11 @@ public class LifeForm {
     return currentLifePoints;
   }
 
+  public void takeHit(int points) {
+    if (currentLifePoints - points >= 0) {
+      currentLifePoints -= points;
+    } else {
+      currentLifePoints = 0;
+    }
+  }
 }
