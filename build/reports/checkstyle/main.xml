@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.11">
-<file name="/home/ld0010/Code/SWEN200/SWEN200_Lab1/src/main/java/environment/Cell.java">
+<file name="C:\Users\lucas\Downloads\lab1-start\lab1-start\src\main\java\environment\Cell.java">
 </file>
-<file name="/home/ld0010/Code/SWEN200/SWEN200_Lab1/src/main/java/environment/Environment.java">
+<file name="C:\Users\lucas\Downloads\lab1-start\lab1-start\src\main\java\environment\Environment.java">
 </file>
-<file name="/home/ld0010/Code/SWEN200/SWEN200_Lab1/src/main/java/lifeform/LifeForm.java">
+<file name="C:\Users\lucas\Downloads\lab1-start\lab1-start\src\main\java\lifeform\LifeForm.java">
 </file>
 </checkstyle>
