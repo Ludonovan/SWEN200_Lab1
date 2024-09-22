@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="environment.TestEnvironment" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-18T03:38:55" hostname="DESKTOP-RSEC365" time="0.002">
+<testsuite name="environment.TestEnvironment" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-22T16:54:30" hostname="DESKTOP-RSEC365" time="0.001">
   <properties/>
   <testcase name="testRemoveLifeForm" classname="environment.TestEnvironment" time="0.001"/>
   <testcase name="testAddLifeForm" classname="environment.TestEnvironment" time="0.0"/>
-  <testcase name="testInitialization" classname="environment.TestEnvironment" time="0.001"/>
+  <testcase name="testInitialization" classname="environment.TestEnvironment" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
