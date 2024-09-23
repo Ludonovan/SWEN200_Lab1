@@ -6,7 +6,7 @@ package lifeform;
  */
 public abstract class LifeForm {
   private String myName;
-  private int currentLifePoints;
+  protected int currentLifePoints;
 
   /**
    * Create an instance
