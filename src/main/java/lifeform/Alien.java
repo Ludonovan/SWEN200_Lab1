@@ -16,9 +16,8 @@ public class Alien extends LifeForm{
    * Constructor for only name and max hp
    * @param name name of the Alien
    * @param maxHitPoints maximum hp of the Alien
-   * @throws RecoveryRateException should not throw
    */
-  public Alien(String name, int maxHitPoints) throws RecoveryRateException {
+  public Alien(String name, int maxHitPoints) {
     super(name, maxHitPoints);
     maxLifePoints = maxHitPoints;
   }
@@ -67,4 +66,10 @@ public class Alien extends LifeForm{
     return maxLifePoints;
   }
 
+  /**
+   * Make an alien recover
+   */
+  public void recover() {
+
+  }
 }
