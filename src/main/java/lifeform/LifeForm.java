@@ -33,6 +33,10 @@ public abstract class LifeForm {
     return currentLifePoints;
   }
 
+  /**
+   * A LifeForm is hurt and takes damage
+   * @param points the amount of LifePoints a LifeForm should lose
+   */
   public void takeHit(int points) {
     if (currentLifePoints - points >= 0) {
       currentLifePoints -= points;

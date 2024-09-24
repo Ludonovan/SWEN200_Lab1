@@ -1,4 +1,5 @@
 package recovery;
+
 import exceptions.RecoveryRateException;
 import org.junit.Test;
 

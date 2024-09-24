@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Fractional recovery is when an alien can only recover a given percentage of their current LifePoints
+ * When an alien can only recover a given percentage of their current LifePoints
  */
 public class TestRecoveryFractional {
 
@@ -31,7 +31,7 @@ public class TestRecoveryFractional {
    * Test recovery when LifePoints are low
    */
   @Test
-  public void testLowHP() {
+  public void testLowHp() {
     RecoveryFractional rf = new RecoveryFractional(.1);
     assertEquals(2, rf.calculateRecovery(1, 100), 0.01);
   }
@@ -49,7 +49,7 @@ public class TestRecoveryFractional {
    * Make sure that health cannot go above max health points
    */
   @Test
-  public void testReturnMaxHP() {
+  public void testReturnMaxHp() {
     RecoveryFractional rf = new RecoveryFractional(100);
     assertEquals(100, rf.calculateRecovery(99, 100), 0.01);
   }

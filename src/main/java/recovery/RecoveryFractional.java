@@ -13,7 +13,7 @@ public class RecoveryFractional implements RecoveryBehavior {
    * @param percent the percentage an Alien can recover
    */
   public RecoveryFractional(double percent) {
-        percentRecovery = percent;
+    percentRecovery = percent;
   }
 
   /**

@@ -18,9 +18,7 @@ public class Alien extends LifeForm {
    * @param name name of the Alien
    * @param maxHitPoints maximum hp of the Alien
    */
-  public Alien(String name, int maxHitPoints) throws RecoveryRateException {
-//    super(name, maxHitPoints);
-//    maxLifePoints = maxHitPoints;
+  public Alien(String name, int maxHitPoints) {
     this(name, maxHitPoints, new RecoveryNone());
   }
 
@@ -29,28 +27,12 @@ public class Alien extends LifeForm {
    * @param name name of the Alien
    * @param maxHitPoints maximum hp of the Alien
    * @param rb the recovery behavior of the Alien
-   * @throws RecoveryRateException should not throw
    */
-  public Alien(String name, int maxHitPoints, RecoveryBehavior rb) throws RecoveryRateException {
+  public Alien(String name, int maxHitPoints, RecoveryBehavior rb) {
     super(name, maxHitPoints);
     maxLifePoints = maxHitPoints;
     this.rb = rb;
   }
-
-//  /**
-//   * Full constructor for Alien
-//   * @param name name of the Alien
-//   * @param maxHitPoints maximum hp of the Alien
-//   * @param rb the recovery behavior of the Alien
-//   * @param rate the rate at which an Alien can recover
-//   * @throws RecoveryRateException should not throw
-//   */
-//  public Alien(String name, int maxHitPoints, RecoveryBehavior rb, int rate) throws RecoveryRateException {
-//    super(name, maxHitPoints);
-//    maxLifePoints = maxHitPoints;
-//    this.rb = rb;
-//    recoveryRate = rate;
-//  }
 
   /**
    * Gets the recovery rate of an Alien

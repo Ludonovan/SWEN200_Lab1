@@ -18,8 +18,8 @@ public class RecoveryLinear implements RecoveryBehavior {
    * Calculate the recovery points to be added to the current health
    * @param currentLife current life points
    * @param maxLife maximum life points
-   * @return the sum of currentLife and the recoveryStep
-   *         0 if health is 0
+   * @return the sum of currentLife and the recoveryStep,
+   *         0 if health is 0,
    *         maxLife otherwise
    */
   public int calculateRecovery(int currentLife, int maxLife) {
