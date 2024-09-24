@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="lifeform.TestAlien" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-09-23T18:27:00" hostname="LDonovan" time="0.004">
+<testsuite name="lifeform.TestAlien" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-09-24T00:30:14" hostname="DESKTOP-RSEC365" time="0.002">
   <properties/>
-  <testcase name="testLinearFractional" classname="lifeform.TestAlien" time="0.003"/>
+  <testcase name="testLinearFractional" classname="lifeform.TestAlien" time="0.001"/>
   <testcase name="testLinearRecovery" classname="lifeform.TestAlien" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

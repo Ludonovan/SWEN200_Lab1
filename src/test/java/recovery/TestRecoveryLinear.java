@@ -14,7 +14,7 @@ public class TestRecoveryLinear {
    */
   @Test
   public void noRecoveryWhenNotHurt() {
-    RecoveryLinear rl= new RecoveryLinear(3);
+    RecoveryLinear rl = new RecoveryLinear(3);
     int maxLifePts = 30;
     int result = rl.calculateRecovery(maxLifePts, maxLifePts);
     assertEquals(maxLifePts,result);

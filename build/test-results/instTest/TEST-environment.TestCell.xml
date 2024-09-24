@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="environment.TestCell" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-23T18:27:00" hostname="LDonovan" time="0.001">
+<testsuite name="environment.TestCell" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-09-24T00:30:14" hostname="DESKTOP-RSEC365" time="0.005">
   <properties/>
-  <testcase name="testSetLifeForm" classname="environment.TestCell" time="0.0"/>
+  <testcase name="testSetLifeForm" classname="environment.TestCell" time="0.004"/>
   <testcase name="testRemoveLifeForm" classname="environment.TestCell" time="0.0"/>
   <testcase name="testInitialization" classname="environment.TestCell" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

@@ -6,8 +6,16 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+
+/**
+ * Aliens cannot recover
+ */
 public class TestRecoveryNone {
 
+  /**
+   * Test that an Alien with this behavior will not recover
+   * @throws RecoveryRateException
+   */
   @Test
   public void testNoRecovery() throws RecoveryRateException {
     RecoveryBehavior rb = new RecoveryNone();
