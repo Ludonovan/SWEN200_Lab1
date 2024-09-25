@@ -23,10 +23,9 @@ public class TestRecoveryLinear {
 
   /**
    * Test that recovery works correctly when hp is low
-   * @throws RecoveryRateException should not throw
    */
   @Test
-  public void testReallyHurts() throws RecoveryRateException {
+  public void testReallyHurts()  {
     RecoveryLinear rl = new RecoveryLinear(3);
     assertEquals(8, rl.calculateRecovery(5, 10));
   }
@@ -36,7 +35,7 @@ public class TestRecoveryLinear {
    */
   @Test
   public void testHurtsALittle() {
-    RecoveryLinear rl = new RecoveryLinear(100);
+    RecoveryLinear rl = new RecoveryLinear(1);
     assertEquals(10, rl.calculateRecovery(9, 10));
   }
 

@@ -29,6 +29,8 @@ public class TestLifeForm {
     LifeForm entity = new MockLifeForm("Bob", 40);
     entity.takeHit(10);
     assertEquals(30, entity.getCurrentLifePoints());
+    entity.takeHit(10);
+    assertEquals(20, entity.getCurrentLifePoints());
   }
 
 }

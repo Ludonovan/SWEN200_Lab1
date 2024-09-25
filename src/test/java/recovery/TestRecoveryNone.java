@@ -24,7 +24,8 @@ public class TestRecoveryNone {
     a.takeHit(10);
     a.recover();
     assertEquals(a.getCurrentLifePoints(), 90);
-
   }
+
+
 
 }
