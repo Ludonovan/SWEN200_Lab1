@@ -13,7 +13,7 @@ public class Human extends LifeForm {
    * @param armor the current armor of the LifeForm
    */
   public Human(String name, int life, int armor) {
-    super(name, life);
+    super(name, life, 5);
     if (armor >= 0) {
       armorPoints = armor;
     } else {
@@ -41,4 +41,13 @@ public class Human extends LifeForm {
       armorPoints = 0;
     }
   }
+
+  @Override
+  public void takeHit(int points) {
+    if (points > armorPoints) {
+      super.takeHit(points-armorPoints);
+    }
+
+  }
+
 }

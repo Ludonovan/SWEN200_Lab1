@@ -7,6 +7,7 @@ package lifeform;
 public abstract class LifeForm {
   private String myName;
   protected int currentLifePoints;
+  protected int attackStrength;
 
   /**
    * Create an instance
@@ -17,6 +18,12 @@ public abstract class LifeForm {
   public LifeForm(String name, int points) {
     myName = name;
     currentLifePoints = points;
+  }
+
+  public LifeForm(String name, int points, int strength) {
+    myName = name;
+    currentLifePoints = points;
+    attackStrength = strength;
   }
 
   /**
@@ -42,6 +49,21 @@ public abstract class LifeForm {
       currentLifePoints -= points;
     } else {
       currentLifePoints = 0;
+    }
+  }
+
+// *** MAY WANT TO OPT OUT SINCE IN CONSTRUCTOR??***
+//  public void setAttackStrength(int s) {
+//    attackStrength = s;
+//  }
+
+  public int getAttackStrength() {
+    return attackStrength;
+  }
+
+  public void attack(LifeForm lf) {
+    if (currentLifePoints > 0) {
+      lf.takeHit(attackStrength);
     }
   }
 }

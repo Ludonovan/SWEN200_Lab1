@@ -16,9 +16,10 @@ public class TestLifeForm {
   @Test
   public void testInitialization() {
     LifeForm entity;
-    entity = new MockLifeForm("Bob", 40);
+    entity = new MockLifeForm("Bob", 40, 10);
     assertEquals("Bob", entity.getName());
     assertEquals(40, entity.getCurrentLifePoints());
+    assertEquals(10, entity.getAttackStrength());
   }
 
   /**
@@ -33,4 +34,20 @@ public class TestLifeForm {
     assertEquals(20, entity.getCurrentLifePoints());
   }
 
+
+  @Test
+  public void testAttack() {
+    LifeForm a = new MockLifeForm("A", 50, 10);
+    LifeForm b = new MockLifeForm("B", 100, 5);
+    a.attack(b);
+    assertEquals(90, b.getCurrentLifePoints());
+    b.attack(a);
+    assertEquals(45, a.getCurrentLifePoints());
+
+    // Test dead lifeforms can't attack
+    a.takeHit(45);
+    a.attack(b);
+    assertEquals(90, b.getCurrentLifePoints());
+
+  }
 }
