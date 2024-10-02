@@ -35,6 +35,9 @@ public class TestLifeForm {
   }
 
 
+  /**
+   * Test that a lifeform can attack
+   */
   @Test
   public void testAttack() {
     LifeForm a = new MockLifeForm("A", 50, 10);

@@ -42,10 +42,14 @@ public class Human extends LifeForm {
     }
   }
 
+  /**
+   * Make the armor absorb some of the damage
+   * @param points the amount of LifePoints a LifeForm should lose
+   */
   @Override
   public void takeHit(int points) {
     if (points > armorPoints) {
-      super.takeHit(points-armorPoints);
+      super.takeHit(points - armorPoints);
     }
 
   }

@@ -37,6 +37,13 @@ public class Alien extends LifeForm implements TimerObserver {
     this.rb = rb;
   }
 
+  /**
+   * Complete constructor for alien
+   * @param name name of Alien
+   * @param maxHitPoints maximum hp of alien
+   * @param rb recovery behavior of the alien
+   * @param recoveryRate how many rounds it takes for an alien to recover
+   */
   public Alien(String name, int maxHitPoints, RecoveryBehavior rb, int recoveryRate) {
     super(name, maxHitPoints, 10);
     maxLifePoints = maxHitPoints;
@@ -50,8 +57,11 @@ public class Alien extends LifeForm implements TimerObserver {
    * @return recoveryRate
    */
   public int getRecoveryRate() throws RecoveryRateException {
-    if (recoveryRate < 0) { throw new RecoveryRateException("Less than 0"); }
-    else { return recoveryRate; }
+    if (recoveryRate < 0) {
+      throw new RecoveryRateException("Less than 0");
+    } else {
+      return recoveryRate;
+    }
   }
 
   /**
@@ -73,6 +83,10 @@ public class Alien extends LifeForm implements TimerObserver {
     }
   }
 
+  /**
+   * Determines when an alien should recover
+   * @param time not used
+   */
   @Override
   public void updateTime(int time) {
     if (recoveryRate == 0) {

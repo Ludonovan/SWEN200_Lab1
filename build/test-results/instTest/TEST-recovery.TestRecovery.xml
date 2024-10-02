@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="recovery.TestRecovery" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-09-30T13:59:55" hostname="LDonovan" time="0.021">
+<testsuite name="recovery.TestRecovery" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-10-01T23:57:29" hostname="DESKTOP-RSEC365" time="0.001">
   <properties/>
-  <testcase name="testRecoverFullAmount" classname="recovery.TestRecovery" time="0.015"/>
+  <testcase name="testRecoverFullAmount" classname="recovery.TestRecovery" time="0.0"/>
   <testcase name="testNoRecoveryWhenNotHurt" classname="recovery.TestRecovery" time="0.0"/>
-  <testcase name="testRecoveryNone" classname="recovery.TestRecovery" time="0.002"/>
+  <testcase name="testRecoveryNone" classname="recovery.TestRecovery" time="0.0"/>
   <testcase name="testNoReturnFromDead" classname="recovery.TestRecovery" time="0.0"/>
   <testcase name="testRecoveryPartial" classname="recovery.TestRecovery" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

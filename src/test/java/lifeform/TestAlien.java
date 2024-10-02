@@ -26,6 +26,10 @@ public class TestAlien {
     assertEquals(a.getAttackStrength(), 10);
   }
 
+  /**
+   * Test that linear recovery works properly
+   * @throws RecoveryRateException should not throw
+   */
   @Test
   public void testLinearRecovery() throws RecoveryRateException {
     RecoveryLinear rl = new RecoveryLinear(10); 
@@ -35,13 +39,20 @@ public class TestAlien {
     assertEquals(70, a.getCurrentLifePoints());
   }
 
+  /**
+   * Test that recoveryRate is set correctly
+   * @throws RecoveryRateException should not throw
+   */
   @Test
-  public void testRecoveryRate() throws RecoveryRateException{
+  public void testRecoveryRate() throws RecoveryRateException {
     SimpleTimer st = new SimpleTimer();
     Alien a = new Alien("ET", 100, new RecoveryLinear(5), 2);
     assertEquals(2, a.getRecoveryRate());
   }
 
+  /**
+   * Test recovery in action
+   */
   @Test
   public void testCombatRecovery() {
     SimpleTimer st = new SimpleTimer();
@@ -63,6 +74,9 @@ public class TestAlien {
     assertEquals(0, a.getCurrentLifePoints());
   }
 
+  /**
+   * Test recovery in action
+   */
   @Test
   public void testCombatRecovery2() {
     SimpleTimer st = new SimpleTimer();
@@ -78,6 +92,9 @@ public class TestAlien {
     assertEquals(20, a.getCurrentLifePoints());
   }
 
+  /**
+   * Test that an alien that shouldnt recover doesnt recover
+   */
   @Test
   public void testNoRecovery() {
     SimpleTimer st = new SimpleTimer();
@@ -92,7 +109,11 @@ public class TestAlien {
     assertEquals(10, a.getCurrentLifePoints());
   }
 
-  @Test( expected = RecoveryRateException.class )
+  /**
+   * Test negative recovery rates
+   * @throws RecoveryRateException should throw if negative
+   */
+  @Test(expected = RecoveryRateException.class)
   public void testNegRecoveryRate() throws RecoveryRateException {
     SimpleTimer st = new SimpleTimer();
     RecoveryBehavior rb = new RecoveryLinear(5);

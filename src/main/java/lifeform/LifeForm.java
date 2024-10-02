@@ -20,6 +20,12 @@ public abstract class LifeForm {
     currentLifePoints = points;
   }
 
+  /**
+   * Create an instance of a lifeform
+   * @param name name of the life form
+   * @param points starting life points of the life form
+   * @param strength how much damage the lifeform does to other lifeforms
+   */
   public LifeForm(String name, int points, int strength) {
     myName = name;
     currentLifePoints = points;
@@ -52,15 +58,26 @@ public abstract class LifeForm {
     }
   }
 
-// *** MAY WANT TO OPT OUT SINCE IN CONSTRUCTOR??***
-//  public void setAttackStrength(int s) {
-//    attackStrength = s;
-//  }
+  /**
+   * Set the attack strength
+   * @param s the value to set the attack strenght to
+   */
+  public void setAttackStrength(int s) {
+    attackStrength = s;
+  }
 
+  /**
+   * Gets the attack strength of a life form
+   * @return attackStrength the strength of a life form
+   */
   public int getAttackStrength() {
     return attackStrength;
   }
 
+  /**
+   * Attack another life form
+   * @param lf the life form to attack
+   */
   public void attack(LifeForm lf) {
     if (currentLifePoints > 0) {
       lf.takeHit(attackStrength);

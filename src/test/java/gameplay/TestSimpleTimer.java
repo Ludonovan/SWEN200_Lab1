@@ -4,8 +4,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * To test SimpleTimer
+ */
 public class TestSimpleTimer {
 
+  /**
+   * Test the initialization
+   */
   @Test
   public void testInitialization() {
     SimpleTimer t = new SimpleTimer();
@@ -13,6 +19,9 @@ public class TestSimpleTimer {
     assertEquals(0, t.getNumObservers());
   }
 
+  /**
+   * Test that an observer can be added
+   */
   @Test
   public void testAddObserver() {
     SimpleTimer t = new SimpleTimer();
@@ -21,6 +30,9 @@ public class TestSimpleTimer {
     assertEquals(1, t.getNumObservers());
   }
 
+  /**
+   * Test that an observer can be removed
+   */
   @Test
   public void testRemoveObserver() {
     SimpleTimer t = new SimpleTimer();
@@ -31,6 +43,9 @@ public class TestSimpleTimer {
     assertEquals(0, t.getNumObservers());
   }
 
+  /**
+   * Test that timeChanged works properly
+   */
   @Test
   public void testTimeChanged() {
     SimpleTimer t = new SimpleTimer();
@@ -60,7 +75,7 @@ public class TestSimpleTimer {
     SimpleTimer st = new SimpleTimer(1000);
     st.start();
     Thread.sleep(250); // So we are 1/4th a second different
-    for (int x=0;x<5;x++){
+    for (int x = 0; x < 5; x++) {
       assertEquals(x,st.getRound()); //assumes round starts at 0
       Thread.sleep(1000); // wait for the next time change
     }

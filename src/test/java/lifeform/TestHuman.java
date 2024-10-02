@@ -44,6 +44,9 @@ public class TestHuman {
     assertEquals(a.getArmorPoints(), 0);
   }
 
+  /**
+   * Test that attack works with no armor
+   */
   @Test
   public void testAttackNoArmor() {
     Human h1 = new Human("Bob", 50, 0);
@@ -52,6 +55,9 @@ public class TestHuman {
     assertEquals(45, h2.getCurrentLifePoints());
   }
 
+  /**
+   * Test that attack works with armor
+   */
   @Test
   public void testAttackWithArmor() {
     Human h1 = new Human("Bob", 50, 10);
