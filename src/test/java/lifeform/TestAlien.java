@@ -1,6 +1,7 @@
 package lifeform;
 
 import exceptions.RecoveryRateException;
+import gameplay.MockSimpleTimerObserver;
 import gameplay.SimpleTimer;
 import recovery.RecoveryBehavior;
 import recovery.RecoveryLinear;
@@ -51,6 +52,23 @@ public class TestAlien {
   }
 
   /**
+   * Test that an alien that shouldnt recover doesnt recover
+   */
+  @Test
+  public void testNoRecovery() {
+    SimpleTimer st = new SimpleTimer();
+    Alien a = new Alien("ET", 100, new RecoveryLinear(5), 0);
+    st.addTimeObserver(a);
+    st.timeChanged();
+    a.takeHit(90);
+    assertEquals(10, a.getCurrentLifePoints());
+    st.timeChanged();
+    st.timeChanged();
+    st.timeChanged();
+    assertEquals(10, a.getCurrentLifePoints());
+  }
+
+  /**
    * Test recovery in action
    */
   @Test
@@ -93,20 +111,31 @@ public class TestAlien {
   }
 
   /**
-   * Test that an alien that shouldnt recover doesnt recover
+   * Can track passage of time
    */
   @Test
-  public void testNoRecovery() {
+  public void testTimePasses() {
     SimpleTimer st = new SimpleTimer();
-    Alien a = new Alien("ET", 100, new RecoveryLinear(5), 0);
+    MockSimpleTimerObserver a = new MockSimpleTimerObserver();
     st.addTimeObserver(a);
     st.timeChanged();
-    a.takeHit(90);
-    assertEquals(10, a.getCurrentLifePoints());
+    assertEquals(1, a.myTime);
+  }
+
+  /**
+   * Removed observers cant recover
+   */
+  @Test
+  public void testRemovedCantRecover() {
+    SimpleTimer st = new SimpleTimer();
+    MockSimpleTimerObserver a = new MockSimpleTimerObserver();
+    st.addTimeObserver(a);
+    st.timeChanged();
+    st.removeTimeObserver(a);
     st.timeChanged();
     st.timeChanged();
     st.timeChanged();
-    assertEquals(10, a.getCurrentLifePoints());
+    assertEquals(1, a.myTime);
   }
 
   /**

@@ -51,6 +51,18 @@ public class TestLifeForm {
     a.takeHit(45);
     a.attack(b);
     assertEquals(90, b.getCurrentLifePoints());
-
   }
+
+  /**
+   * Test that dead lifeforms cant attack
+   */
+  @Test
+  public void testNoAttackWhenDead() {
+    LifeForm a = new MockLifeForm("A", 50, 10);
+    LifeForm b = new MockLifeForm("B", 100, 5);
+    a.takeHit(50);
+    a.attack(b);
+    assertEquals(100, b.getCurrentLifePoints());
+  }
+
 }

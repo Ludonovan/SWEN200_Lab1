@@ -20,6 +20,16 @@ public class TestSimpleTimer {
   }
 
   /**
+   * Test that time is updated correctly
+   */
+  @Test
+  public void testTime() {
+    SimpleTimer t = new SimpleTimer();
+    t.timeChanged();
+    assertEquals(1, t.getRound());
+  }
+
+  /**
    * Test that an observer can be added
    */
   @Test

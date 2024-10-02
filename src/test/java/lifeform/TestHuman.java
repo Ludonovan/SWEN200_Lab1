@@ -56,19 +56,37 @@ public class TestHuman {
   }
 
   /**
-   * Test that attack works with armor
+   * Test that an attack that hits less than armor
+   * does not hurt the human
    */
   @Test
-  public void testAttackWithArmor() {
+  public void testArmorTakesAll() {
     Human h1 = new Human("Bob", 50, 10);
     Human h2 = new Human("Rob", 50, 10);
     h1.attack(h2);
     assertEquals(50, h2.getCurrentLifePoints());
-    Human h3 = new Human("Bob1", 50, 5);
-    h3.attack(h1);
-    assertEquals(50, h1.getCurrentLifePoints());
-    h1.setArmorPoints(4);
-    h3.attack(h1);
-    assertEquals(49, h1.getCurrentLifePoints());
   }
+
+  /**
+   * Test that attack works with armor as expected
+   */
+  @Test
+  public void testAttackWithArmor2() {
+    Human h1 = new Human("Bob", 50, 10);
+    Human h2 = new Human("Rob", 50, 1);
+    h1.attack(h2);
+    assertEquals(46, h2.getCurrentLifePoints());
+  }
+
+  /**
+   * Test that an attack with power = armor does no damage
+   */
+  @Test
+  public void testAttackEqualsArmor() {
+    Human h1 = new Human("Bob", 50, 5);
+    Human h2 = new Human("Rob", 50, 5);
+    h1.attack(h2);
+    assertEquals(50, h2.getCurrentLifePoints());
+  }
+
 }
